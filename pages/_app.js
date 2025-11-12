@@ -19,7 +19,8 @@ function Application({ Component, pageProps }) {
     },
     auth: {
       type: 'token',
-      token: 'pat_********',
+      token: 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy
+,
       onRefreshToken: function () {
         return 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy
 '
