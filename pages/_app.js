@@ -7,15 +7,27 @@ function Application({ Component, pageProps }) {
       <Component {...pageProps} />
       
       {/* This script loads the Coze library first */}
-      <Script 
-        src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"
-        strategy="afterInteractive" // Loads after the page is interactive
-        onLoad={() => {
-          // This function runs *after* the script above has loaded
-          // Now we initialize your bot
-          new CozeWebSDK.WebChatClient({
-            config: {
-              bot_id: '7568451471281618945', // 
+
+<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7568451471281618945',
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_********',
+      onRefreshToken: function () {
+        return 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy
+'
+      }
+    }
+  });
+</script>
+
             },
             componentProps: {
               title: 'Vinyo Buddy', // This is the title on the chat header
