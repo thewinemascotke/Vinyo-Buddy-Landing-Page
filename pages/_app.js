@@ -15,18 +15,18 @@ function Application({ Component, pageProps }) {
           // Now we initialize your bot
           new CozeWebSDK.WebChatClient({
             config: {
-              bot_id: '7568451471281618945', // This is your bot_id (use your real bot_id here)
+              bot_id: '7568451471281618945', // This is your bot_id 
             },
             componentProps: {
               title: 'Vinyo Buddy', // This is the title on the chat header
             },
             auth: {
               type: 'token',
-              token: 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy', // <-- Your placeholder token
+              token: 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy', // <-- Your token
               onRefreshToken: function () {
                 // This function is required in case the token expires.
                 // For simplicity, we will just return the same token.
-                return 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy' // <-- Your placeholder token
+                return 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy' // <-- Your token
               }
             }
           });
