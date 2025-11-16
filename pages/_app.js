@@ -28,7 +28,7 @@ function Application({ Component, pageProps }) {
                 // This function is required in case the token expires.
                 // For simplicity, we will just return the same token.
                 return 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy
-' // pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy
+' // 
               }
             }
           });
