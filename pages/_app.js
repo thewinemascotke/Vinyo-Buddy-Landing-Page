@@ -23,5 +23,4 @@ function Application({ Component, pageProps }) {
 
 export default Application
 
-export default Application
 
