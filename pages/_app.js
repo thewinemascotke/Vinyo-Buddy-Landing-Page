@@ -1,4 +1,4 @@
-import '@styles/globals.css'
+import '../styles/globals.css'  // <--- FIXED: Changed '@' back to '..'
 import Script from 'next/script'
 
 function Application({ Component, pageProps }) {
