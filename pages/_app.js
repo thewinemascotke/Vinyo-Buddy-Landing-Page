@@ -1,40 +1,27 @@
 import '@styles/globals.css'
-import Script from 'next/script' // Import the Next.js Script component
+import Script from 'next/script'
 
 function Application({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
       
-      {/* This script loads the Coze library first */}
+      {/* Botpress Main Library */}
       <Script 
-        src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"
-        strategy="afterInteractive" // Loads after the page is interactive
-        onLoad={() => {
-          // This function runs *after* the script above has loaded
-          // Now we initialize your bot
-          new CozeWebSDK.WebChatClient({
-            config: {
-              bot_id: '7568451471281618945', // This is your bot_id 
-            },
-            componentProps: {
-              title: 'Vinyo Buddy', // This is the title on the chat header
-            },
-            auth: {
-              type: 'token',
-              token: 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy', // <-- Your token
-              onRefreshToken: function () {
-                // This function is required in case the token expires.
-                // For simplicity, we will just return the same token.
-                return 'pat_Yg6Fl1k5ZcSYgg3blx6qjCLjILzsLrFcOP7qp3Yq13KRenzOobHq8011zSzKXFjy' // <-- Your token
-              }
-            }
-          });
-        }}
+        src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" 
+        strategy="afterInteractive"
+      />
+      
+      {/* Botpress Configuration (Your Unique Bot) */}
+      <Script 
+        src="https://files.bpcontent.cloud/2025/11/20/18/20251120184757-GWRR1APM.js" 
+        strategy="afterInteractive" 
       />
     </>
   )
 }
+
+export default Application
 
 export default Application
 
